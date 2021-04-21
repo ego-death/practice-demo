@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', require('./routes/home'));
-app.use('/', require('./routes/auth'));
+app.use('/auth', require('./routes/auth'));
 app.use('/dashboard', require('./routes/dashboard'));
 
 app.listen(process.env.PORT, (err) => {
